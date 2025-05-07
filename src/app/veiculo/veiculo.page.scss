@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+  }
+  
+  .left, .right {
+    flex: 1;
+  }
+  

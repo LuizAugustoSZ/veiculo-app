@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Cadastro e Atualização</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/veiculo" fill="outline" shape="round" color="primary">cancelar</ion-button>      
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Marca</ion-label>
+      <ion-input [(ngModel)]="nome" placeholder="Digite o nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Modelo</ion-label>
+      <ion-input [(ngModel)]="modelo" placeholder="Digite o modelo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Ano</ion-label>
+      <ion-input [(ngModel)]="ano" type="number" placeholder="Digite o ano"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" (click)="cadastrar()">Cadastrar ou Atualizar</ion-button>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Veículos</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/criarveiculo" fill="outline" shape="round" color="primary"><ion-icon name="add"></ion-icon></ion-button>      
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="container">
+    <div class="left">
+      <ion-list>
+        <ion-item *ngFor="let veiculo of veiculos">
+          <ion-label>{{ veiculo.nome }} {{veiculo.modelo}} - {{veiculo.ano}}</ion-label>
+          
+          <ion-button fill="clear" (click)="editar(veiculo)" fill="outline" shape="round"><ion-icon name="pencil"></ion-icon></ion-button>
+          
+          <ion-button fill="clear" color="danger" (click)="remover(veiculo)" fill="outline" shape="round"><ion-icon name="trash"></ion-icon></ion-button>
+
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>
